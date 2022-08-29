@@ -21,11 +21,7 @@ function App() {
         {/* 不敲不知道,一敲吓一跳,我基本就是不会 
         switch当时听案例的时候还在想游戏机,结果自己一敲,不知怎么包裹数据
         */}
-        <Switch>{/* 配置路由规则,路由不经常敲,又没有基础,太容易忘了 */}
-        {/*  */}
-        <Rout to=''>首页</Rout>
-        <Rout>登录</Rout>
-        </Switch>
+        <Switch>{/* 配置路由规则,路由不经常敲,又没有基础,太容易忘了 */}</Switch>
         <LayoutHome></LayoutHome>
         <Login></Login>
       </div>
