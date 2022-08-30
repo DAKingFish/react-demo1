@@ -7,27 +7,30 @@
 import './App.css'
 //ps:我明明知道要把router抽取抽成组件,但是不会抽,只能再看一遍案例
 //3.导入路由包
-import { BrowserRouter as Router, Rout, Link, Switch } from 'react-router-dom'
-import LayoutHome from './pages/Layout'
+import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom'
+import Home from './pages/Layout'
 import Login from './pages/Login'
+import Notpage from './pages/Notpage'
 
 function App() {
   return (
     // 路由也是要有容器包裹
     <Router>
       <div className="App">
-        <Link to="/login">登录</Link>
-        <Link to="/home">主页</Link>
-        {/* 不敲不知道,一敲吓一跳,我基本就是不会 
-        switch当时听案例的时候还在想游戏机,结果自己一敲,不知怎么包裹数据
-        */}
-        <Switch>{/* 配置路由规则,路由不经常敲,又没有基础,太容易忘了 */}
-        {/*  */}
-        <Rout to=''>首页</Rout>
-        <Rout>登录</Rout>
+        {/* <Link to="/home">主页</Link>
+        <Link to="/login">登录</Link> */}
+        {/* 不敲不知道,一敲吓一跳,我基本就是不会  */}
+        {/* switch当时听案例的时候还在想游戏机,结果自己一敲,不知怎么包裹数据 */}
+        <Switch>
+          {/* 配置路由规则,路由不经常敲,又没有基础,太容易忘了 */}
+          {/*路由规则语法 <Route path="/home" component={主键名}></Route>  */}
+          <Route path="/home" component={Home}></Route>
+          {/* 代码写错了 */}
+          <Route path="/login" component={Login}></Route>
+          {/* 配置404页面,案例老师懒得写 */}
+          {/* 路由是从上到下匹配,直接在最后一项route配置404页面 */}
+          <Route path="*" component={Notpage}></Route>
         </Switch>
-        <LayoutHome></LayoutHome>
-        <Login></Login>
       </div>
     </Router>
   )

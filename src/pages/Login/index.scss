@@ -1,0 +1,21 @@
+.login {
+  width: 100vw;
+  height: 100vh;
+  background-image: url('../../assets/images/login.png');
+  position: relative;
+  .login-container {
+    width: 440px;
+    height: 360px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid red;
+    .login-logo {
+      width: 200px;
+      height: 60px;
+      display: block; //将元素定义为块元素
+      margin: 0 auto 20px;
+    }
+  }
+}
