@@ -7,7 +7,7 @@
 import './App.css'
 //ps:我明明知道要把router抽取抽成组件,但是不会抽,只能再看一遍案例
 //3.导入路由包
-import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import Home from './pages/Layout'
 import Login from './pages/Login'
 import Notpage from './pages/Notpage'
